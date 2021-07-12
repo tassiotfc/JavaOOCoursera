@@ -1,17 +1,16 @@
-package SistemaPizzaria;
+package sistemapizzaria;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Pizza {
 
 	public static HashMap<String, Integer> qtdIngredientesGastosTodasAsPizzas = new HashMap<>();
-
-	private String ingredientes;
-	private int qtdIngredientesDaPizza;
+	private List<String> ingredientes = new ArrayList<>();
 
 	public void adicionaIngrediente(String ingrediente) {
-		this.ingredientes += ingrediente + "\n";
-		this.qtdIngredientesDaPizza++;
+		this.ingredientes.add(ingrediente);
 		contabilizaIngrediente(ingrediente);
 	}
 
@@ -26,6 +25,7 @@ public class Pizza {
 	}
 
 	public float getPreco() {
+		int qtdIngredientesDaPizza = ingredientes.size();
 		if (qtdIngredientesDaPizza >= 0 && qtdIngredientesDaPizza <= 2)
 			return 15f;
 		else if (qtdIngredientesDaPizza >= 3 && qtdIngredientesDaPizza <= 5)
@@ -36,7 +36,15 @@ public class Pizza {
 		throw new IllegalArgumentException("Oops..., a quantidade de ingredientes deve ser maior ou igual a zero");
 	}
 	
-	public String getIngredientes() {
+	public List<String> getIngredientes() {
 		return this.ingredientes;
+	}
+	
+	public int getQtdIngredientes() {
+		return this.ingredientes.size();
+	}
+	
+	public static void zeraIngredientes() {
+		qtdIngredientesGastosTodasAsPizzas.clear();
 	}
 }

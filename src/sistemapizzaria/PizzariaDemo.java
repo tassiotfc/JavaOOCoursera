@@ -1,4 +1,4 @@
-package SistemaPizzaria;
+package sistemapizzaria;
 
 public class PizzariaDemo {
 	public static void main(String[] args) {

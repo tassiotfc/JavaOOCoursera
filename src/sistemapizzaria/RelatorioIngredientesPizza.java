@@ -1,4 +1,4 @@
-package SistemaPizzaria;
+package sistemapizzaria;
 
 import java.util.HashMap;
 import java.util.Map;

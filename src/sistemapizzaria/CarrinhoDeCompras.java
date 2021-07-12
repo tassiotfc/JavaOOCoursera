@@ -1,4 +1,4 @@
-package SistemaPizzaria;
+package sistemapizzaria;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class CarrinhoDeCompras {
 	private List<Pizza> pizzas = new ArrayList<Pizza>();
 
 	public void adicionaPizza(Pizza pizza) {
-		if (pizza.getIngredientes() == null) {
+		if (pizza.getQtdIngredientes() == 0) {
 			System.out.println("Oops..., pizza sem ingrediente!");
 		} else {
 			pizzas.add(pizza);
@@ -25,5 +25,9 @@ public class CarrinhoDeCompras {
 		} catch (IllegalArgumentException e) {
 			throw new IllegalArgumentException("Oops..., tem alguma pizza com valor invalido");
 		}
+	}
+	
+	public List<Pizza> getPizzas(){
+		return pizzas;
 	}
 }
