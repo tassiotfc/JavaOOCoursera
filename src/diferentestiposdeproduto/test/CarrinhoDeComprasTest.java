@@ -40,8 +40,8 @@ public class CarrinhoDeComprasTest {
 	@Test
 	void testQtdProdutosDiferentesAddNoCarrinho() {
 		cc.adicionaProduto(p1, 2);
-		cc.adicionaProduto(p1, 2);
-		assertEquals(1, cc.qtdProdutosDiferentesNoCarrinho());
+		cc.adicionaProduto(p2, 2);
+		assertEquals(2, cc.qtdProdutosDiferentesNoCarrinho());
 	}
 
 	@Test
