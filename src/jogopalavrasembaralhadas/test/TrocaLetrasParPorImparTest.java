@@ -17,6 +17,6 @@ public class TrocaLetrasParPorImparTest {
 	
 	@Test
 	void testEmbaralhar() {
-		assertEquals("eprdo", trocaLetras.embaralhar("pedro"));
+		assertEquals("eprd", trocaLetras.embaralhar("pedr"));
 	}
 }

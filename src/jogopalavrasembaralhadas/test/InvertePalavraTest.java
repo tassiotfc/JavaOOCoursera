@@ -18,7 +18,7 @@ class InvertePalavraTest {
 	
 	@Test
 	void testEmbaralhar() {
-		assertEquals("asac", invertePalavra.embaralhar("casa"));
+		assertEquals("ordep", invertePalavra.embaralhar("pedro"));
 	}
 
 }
